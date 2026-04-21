@@ -1,4 +1,4 @@
-console.log(" web serverni boshlash ");
+console.log(" web serverni boshlash: ");
 const express = require("express");
 const app = express();
 const http = require("http");
@@ -16,12 +16,23 @@ app.set("views", "views");
 app.set(" view engine ", "ejs");
 
 // 4: routing code
-app.get("/hello", function (req, res) {
-  res.end(` <h1>  HELLO WORLD </h1> `);
+// app.get("/hello", function (req, res) {
+//   res.end(` <h1>  HELLO WORLD </h1> `);
+// });
+
+// app.get("/gift", function (req, res) {
+//   res.end(` <h1> siz sovgalar bolimidasiz </h1> `);
+// });
+
+app.post("/create-item", (req, res) => {
+  // POST: o'zi bilan malumotli olib keladi datapase ga osha maumotni yozadi!
+  console.log(req.body);
+  res.json({ test: "success" });
 });
 
-app.get("/gift", function (req, res) {
-  res.end(` <h1> siz sovgalar bolimidasiz </h1> `);
+app.get("/", function (req, res) {
+  // get: ni malumot o'qish uchun ishlatamiz
+  res.render("harid");
 });
 
 const server = http.createServer(app);

@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 // 3:  views code               BSS: beackend sayt rendring => ejs orqari Frond end ni yasemiz  beackend da. //
 
 app.set("views", "views");
-app.set(" view engine ", "ejs");
+app.set("view engine", "ejs");
 
 // 4: routing code
 // app.get("/hello", function (req, res) {

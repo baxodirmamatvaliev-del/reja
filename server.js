@@ -3,10 +3,21 @@ const express = require("express");
 const app = express();
 const http = require("http");
 
+const fs = require("fs");
+
+let user;
+fs.readFile("database/user.json", "utf8", (err, data) => {
+  if (err) {
+    console.log("ERROR:", err);
+  } else {
+    user = JSON.parse(data);
+  }
+});
+
 // 1: kirish code
-app.use(express.static("public")); // "tashqaridan kelayotgan saproslar uchun hizmat qiladi :"
+app.use(express.static("public")); // "tashqaridan kelayotgan saproslar va foydlanuvchilar uchun hizmat qiladi :"
 app.use(express.json()); // "krib kelayotgan datani OJBKECT ga ogirib beradi:"
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // bu kod bn HTML TRADITIONAL formda yozilgan kodlani qabul qvoladi
 
 // 2: Session code
 
@@ -28,6 +39,10 @@ app.post("/create-item", (req, res) => {
   // POST: o'zi bilan malumotli olib keladi datapase ga osha maumotni yozadi!
   console.log(req.body);
   res.json({ test: "success" });
+});
+
+app.get("/author", (req, res) => {
+  res.render("author", { user: user });
 });
 
 app.get("/", function (req, res) {

@@ -1,5 +1,5 @@
 {
-  "name": "Steve",
+  "name": "LEO",
   "profession": "Software Engineer",
   "age": 20,
   "residence": "S.Korea",
@@ -7,8 +7,7 @@
   "languages": ["Uzbek", "Korean", "English"],
   "skills": ["Html", "Css", "Js", "NodeJS", "Python"],
   "extra_skills": [
-    "Bootstrap",
-    "Materialize",
+    "Bootstrap  Materialize",
     "Styling, Sass",
     "Django, Flask",
     "GIT Knowledge"

@@ -1,17 +1,17 @@
 // MITASK A
 
-let sana = 0;
+// let sana = 0;
 
-function num(gap, world) {
-  for (let i = 0; i < gap.length; i++) {
-    if (gap[i] === world) {
-      sana++;
-    }
-  }
-  return sana;
-}
+// function num(gap, world) {
+//   for (let i = 0; i < gap.length; i++) {
+//     if (gap[i] === world) {
+//       sana++;
+//     }
+//   }
+//   return sana;
+// }
 
-console.log(num("engineer", "e"));
+// console.log(num("engineer", "e"));
 
 // console.log("BekzodRizo: Maslahatlari!");
 // const list = [

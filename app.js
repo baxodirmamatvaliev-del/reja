@@ -1,5 +1,4 @@
-console.log(" web serverni boshlash: ");
-const console = require("console");
+console.log("web serverni boshlash:");
 const express = require("express");
 const app = express();
 
@@ -38,38 +37,43 @@ app.set("view engine", "ejs");
 // });
 
 app.post("/create-item", (req, res) => {
-  // POST: o'zi bilan malumotli olib keladi datapase ga osha maumotni yozadi!
-  console.log("user entered /create-item");
+  console.log("user entered");
   console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
     if (err) {
       console.log(err);
-      res.end("seomthing when wrong:");
+      res.end("something went wrong");
     } else {
-      console.log(" succsesfully added");
+      res.end("successfully added");
     }
   });
+  // res.end("success")
+
+  // console.log('====================================');
+  // console.log(req.body);
+  // // console.log(req);
+  // res.json({ test: "success" })
+  // console.log('====================================');
 });
 
 app.get("/author", (req, res) => {
   res.render("author", { user: user });
 });
 
-app.get("/", function (req, res) {
-  console.log("user entered /");
+app.get("/", (req, res) => {
+  console.log("user entered");
   db.collection("plans")
     .find()
     .toArray((err, data) => {
       if (err) {
         console.log(err);
-        res.end("seomthing when wrong:");
+        res.end("something went wrong");
       } else {
-        console.log(data);
+        // console.log(data);
         res.render("reja", { items: data });
       }
     });
-  // get: ni malumot o'qish uchun ishlatamiz
 });
 
 module.exports = app;

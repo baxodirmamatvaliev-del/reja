@@ -1,10 +1,9 @@
 const http = require("http");
 const mongodb = require("mongodb");
-const { connect } = require("http2");
 
 let db;
 const connectionString =
-  "mongodb+srv://LEO:kpif2Ftqk0AHZ7s9@cluster0.tp9ctte.mongodb.net/ /reja?retryWrites=true&w=majority";
+  "mongodb+srv://LEO:kpif2Ftqk0AHZ7s9@cluster0.tp9ctte.mongodb.net/reja?retryWrites=true&w=majority";
 
 mongodb.connect(
   connectionString,

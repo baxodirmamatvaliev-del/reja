@@ -1,17 +1,17 @@
 // MITASK B
 
-function countDigits(str) {
-  let topish = 0;
-  for (let i = 0; i < str.lenght; i++) {
-    if (!isNaN(str[i]) && str[i] !== "") {
-      topish++;
-    }
-  }
-  return topish;
-}
+// function countDigits(str) {
+//   let topish = 0;
+//   for (let i = 0; i < str.lenght; i++) {
+//     if (!isNaN(str[i]) && str[i] !== "") {
+//       topish++;
+//     }
+//   }
+//   return topish;
+// }
 
-const natija = countDigits("a7a94h34949sf9fg9j");
-console.log(natija);
+// const natija = countDigits("a7a94h34949sf9fg9j");
+// console.log(natija);
 
 // MITASK A
 

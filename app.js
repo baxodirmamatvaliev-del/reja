@@ -5,6 +5,7 @@ const app = express();
 const fs = require("fs");
 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 let user;
 fs.readFile("database/user.json", "utf8", (err, data) => {
@@ -25,7 +26,7 @@ app.use(express.urlencoded({ extended: true })); // bu kod bn HTML TRADITIONAL f
 // 3:  views code               BSS: beackend sayt rendring => ejs orqari Frond end ni yasemiz  beackend da. //
 
 app.set("views", "views");
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); // backand da frondend quradi
 
 // 4: routing code
 // app.get("/hello", function (req, res) {
@@ -41,25 +42,24 @@ app.post("/create-item", (req, res) => {
   console.log(req.body);
   const new_reja = req.body.reja;
   db.collection("plans").insertOne({ reja: new_reja }, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.end("something went wrong");
-    } else {
-      res.end("successfully added");
-    }
+    console.log(data.ops);
+    res.json(data.ops[0]);
   });
-  // res.end("success")
-
-  // console.log('====================================');
-  // console.log(req.body);
-  // // console.log(req);
-  // res.json({ test: "success" })
-  // console.log('====================================');
 });
 
-app.get("/author", (req, res) => {
-  res.render("author", { user: user });
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "success" });
+    },
+  );
 });
+
+// app.get("/author", (req, res) => {
+//   res.render("author", { user: user });
+// });
 
 app.get("/", (req, res) => {
   console.log("user entered");

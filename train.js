@@ -1,3 +1,55 @@
+// MITASK C
+
+// const moment = require("moment");
+// const vaqt = moment().format("HH.MM");
+
+// class Shop {
+//   constructor(osh, shashlik, somsa, cola) {
+//     this.osh = osh;
+//     this.shashlik = shashlik;
+//     this.somsa = somsa;
+//     this.cola = cola;
+//   }
+
+//   qoldiq() {
+//     console.log(
+//       ` Hozirgi ${vaqt} da ${this.osh} ta osh , ${this.somsa} ta somsa ,va ${this.shashlik} tashashlik bor,  oxirgi qoshimchasiga ${this.cola} ta cola ham bor`,
+//     );
+//   }
+
+//   sotish(nomi, soni) {
+//     if (nomi === "osh");
+//     this.osh -= soni;
+//     if (nomi === "shashlik");
+//     this.shashlik -= soni;
+//     if (nomi === "somsa");
+//     this.somsa -= soni;
+//     if (nomi === "cola");
+//     this.cola -= soni;
+
+//     // console.log(` ${this.nomi} ta ${this.soni} sotildi :)`);
+//   }
+
+//   qabul(nomi, soni) {
+//     if (nomi === "osh");
+//     this.osh += soni;
+//     if (nomi === "shashlik");
+//     this.shashlik += soni;
+//     if (nomi === "somsa");
+//     this.somsa += soni;
+//     if (nomi === "cola");
+//     this.cola += soni;
+
+//     console.log(` ${this.nomi} ta ${this.nomi} qabul qilindi :)`);
+//   }
+// }
+
+// const shop = new Shop(10, 5, 5, 5);
+
+// shop.qabul(1, 1, 1);
+// shop.sotish(1, 1, 1, 1);
+// shop.qoldiq();
+
 // MITASK B
 
 // function countDigits(str) {

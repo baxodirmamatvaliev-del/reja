@@ -1,3 +1,14 @@
+// MITASK D
+
+// function mitask(a, b) {
+//   if (a.length !== b.length) {
+//     return false;
+//   }
+//   return true;
+// }
+
+// console.log(mitask("mit", "mit"));
+
 // MITASK C
 
 // const moment = require("moment");

@@ -1,3 +1,17 @@
+// MITASK E
+
+// function mitask(st) {
+//   let result = "";
+
+//   for (let i = st.length - 1; i >= 0; i--) {
+//     result += st[i];
+//   }
+
+//   return result;
+// }
+
+// console.log(mitask("mit"));
+
 // MITASK D
 
 // function mitask(a, b) {

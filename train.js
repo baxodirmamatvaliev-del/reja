@@ -1,3 +1,17 @@
+// MITASK F
+
+function findDoublers(mitask) {
+  for (let i = 0; i < mitask.length; i++) {
+    for (let j = i + 1; j < mitask.length; j++) {
+      if (mitask[i] === mitask[j]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
+console.log(findDoublers("abdujabbor"));
 // MITASK E
 
 // function mitask(st) {

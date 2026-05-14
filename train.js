@@ -1,17 +1,33 @@
-// MITASK F
+// MITASK H
 
-function findDoublers(mitask) {
-  for (let i = 0; i < mitask.length; i++) {
-    for (let j = i + 1; j < mitask.length; j++) {
-      if (mitask[i] === mitask[j]) {
-        return true;
-      }
+function mitask(arr) {
+  let result = "";
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      result = result + arr[i];
     }
   }
-  return false;
+
+  return result;
 }
 
-console.log(findDoublers("abdujabbor"));
+console.log(mitask([1, -9, 9]));
+
+// MITASK F
+
+//function findDoublers(mitask) {
+//for (let i = 0; i < mitask.length; i++) {
+// for (let j = i + 1; j < mitask.length; j++) {
+//  if (mitask[i] === mitask[j]) {
+//   return true;
+//}
+// }
+//}
+//return false;
+//}
+
+// console.log(findDoublers("salom"));
 // MITASK E
 
 // function mitask(st) {

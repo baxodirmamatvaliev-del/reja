@@ -1,18 +1,45 @@
-// MITASK H
+// MITASK I
 
 function mitask(arr) {
-  let result = "";
+  let elit = 0;
+  let max = 0;
+  let result = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      result = result + arr[i];
+    elit = 0;
+
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        elit++;
+      }
+    }
+
+    if (elit > max) {
+      max = elit;
+      result = arr[i];
     }
   }
 
   return result;
 }
 
-console.log(mitask([1, -9, 9]));
+console.log(mitask([1, 2, 3, 4, 5, 4, 6, 4]));
+
+// MITASK H
+
+//function mitask(arr) {
+//let result = "";
+
+//for (let i = 0; i < arr.length; i++) {
+// if (arr[i] > 0) {
+// result = result + arr[i];
+//}
+//}
+
+//return result;
+//}
+
+//console.log(mitask([1, -9, 9]));
 
 // MITASK F
 

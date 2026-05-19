@@ -1,29 +1,48 @@
-// MITASK I
+// MITASK J
 
-function mitask(arr) {
-  let elit = 0;
-  let max = 0;
-  let result = 0;
+function find(str) {
+  let string = str.split(" "); // bu stringni "array" qlib beradi
 
-  for (let i = 0; i < arr.length; i++) {
-    elit = 0;
+  let quti = ""; // bu uzun sozimnu olib beradi
 
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[i] === arr[j]) {
-        elit++;
-      }
-    }
-
-    if (elit > max) {
-      max = elit;
-      result = arr[i];
+  for (let i = 0; i < string.length; i++) {
+    // array ichidagi sozlani aylanadi
+    if (string[i].length > quti.length) {
+      // uzunligini tekshinadi
+      quti = string[i]; // uzunn bolsa ishga tushadi
     }
   }
 
-  return result;
+  return quti; // bu uzun sozni qaytaradi
 }
 
-console.log(mitask([1, 2, 3, 4, 5, 4, 6, 4]));
+console.log(find("I came from Uzbekistan"));
+// MITASK I
+
+// function mitask(arr) {
+//let elit = 0;
+//let max = 0;
+//let result = 0;
+
+//for (let i = 0; i < arr.length; i++) {
+// elit = 0;
+
+//for (let j = 0; j < arr.length; j++) {
+// if (arr[i] === arr[j]) {
+// elit++;
+//}
+//}
+
+// if (elit > max) {
+// max = elit;
+// result = arr[i];
+// }
+// }
+
+// return result;
+// }
+
+// console.log(mitask([1, 2, 3, 4, 5, 4, 6, 4]));
 
 // MITASK H
 

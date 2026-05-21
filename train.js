@@ -1,22 +1,44 @@
-// MITASK J
+// MITASK K
 
-function find(str) {
-  let string = str.split(" "); // bu stringni "array" qlib beradi
+function Vowels(str) {
+  let count = 0;
 
-  let quti = ""; // bu uzun sozimnu olib beradi
-
-  for (let i = 0; i < string.length; i++) {
-    // array ichidagi sozlani aylanadi
-    if (string[i].length > quti.length) {
-      // uzunligini tekshinadi
-      quti = string[i]; // uzunn bolsa ishga tushadi
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str[i] == "a" ||
+      str[i] == "e" ||
+      str[i] == "i" ||
+      str[i] == "o" ||
+      str[i] == "u"
+    ) {
+      count = count + 1;
     }
   }
 
-  return quti; // bu uzun sozni qaytaradi
+  return count;
 }
 
-console.log(find("I came from Uzbekistan"));
+console.log(Vowels("string"));
+
+// MITASK J
+
+//function find(str) {
+//let string = str.split(" "); // bu stringni "array" qlib beradi
+
+//let quti = ""; // bu uzun sozimnu olib beradi
+
+//for (let i = 0; i < string.length; i++) {
+// array ichidagi sozlani aylanadi
+//if (string[i].length > quti.length) {
+// uzunligini tekshinadi
+//quti = string[i]; // uzunn bolsa ishga tushadi
+//}
+//}
+
+//return quti; // bu uzun sozni qaytaradi
+//}
+
+//console.log(find("I came from Uzbekistan"));
 // MITASK I
 
 // function mitask(arr) {
